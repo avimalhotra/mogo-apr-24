@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+*,::before,::after{margin: 0; box-sizing: border-box;}
+a{ text-decoration: none;}
+canvas,img,video{ vertical-align: bottom;}
+ul{ list-style: none; padding: 0;}
+button{ cursor: pointer; padding: 0;}
+label{ display: inline-block;}
+:disabled{ cursor: not-allowed;}
+
+
+.kus{ font-family: "Kaushan Script", cursive;; }
+html{
+    font-size: 15px;
+    --ff:"Montserrat", sans-serif;
+    --red:#f38181;
+}
+
+body{
+    font:16px/1.3 var(--ff);
+}
+
+.container{ max-width: 1230px; margin: auto; padding: 0 1rem;}
+
+.row{ display: flex; flex-flow: row wrap; margin: 0 -1rem;}
+[class^="col-"]{ flex: 1 0 auto; padding: 0 1rem; }
+.col-1{ flex-basis: 8.33%; max-width: 8.33%; }
+.col-2{ flex-basis: 16.66%; max-width: 16.66%; }
+.col-3{ flex-basis: 25%; max-width: 25%; }
+.col-4{ flex-basis: 33.3336%; max-width: 33.3336%;}
+.col-5{ flex-basis: 41.66%; max-width: 41.66%;}
+.col-6{ flex-basis: 50%; max-width: 50%;}
+.col-7{ flex-basis: 58.33%; max-width: 58.33%;}
+.col-8{ flex-basis: 66.66%; max-width: 66.66%;}
+.col-9{ flex-basis: 75%; max-width: 75%;}
+.col-10{ flex-basis: 83.33%; max-width: 83.33%;}
+.col-11{ flex-basis: 91.66%; max-width: 91.66%;}
+.col-12{ flex-basis: 100%; max-width: 100%;}
+.col-auto{ flex-basis: 20%; max-width: 20%;}
+.flex{ display: flex;}
+.justify-space-between{ justify-content: space-between;}
+.justify-right{ justify-content: right;}
+.justify-center{ justify-content: center;}
+.align-items{ align-items: center;}
+
+
+/* layout */
+.wrap-1{ padding: 25px 0; background: url(../img/bg1-1.webp) no-repeat center/cover; color: #fff; aspect-ratio: 1.9207;}
+.wrap-1 h1{ font-size: 30px; }
+.wrap-1 h1 a{ color: inherit; }
+.wrap-1 nav li{ margin: 0 28px;}
+.wrap-1 nav a{ font-size: 14px; display: block; padding: 8px 0; color: inherit; border-bottom: 3px solid transparent; }
+.wrap-1 nav a.active{ color: #fce38a; border-bottom: 3px solid; }
+.wrap-1 .menu li{ margin: 0 20px;}
+.wrap-1 .menu a{ color: inherit; display: block;}
+
+.banner{ text-align: center; padding: 165px 1rem 0 1rem; }
+.sep{ width: 60px; height: 3px; margin: auto;}
+.bg-white{ background: #fff; margin: 50px auto;}
+.banner .kus{ font-size: 5rem;}
+.banner p.lg{ font-size: 10rem; font-weight: bold; line-height: 1;}
+.banner a.link{ display: inline-block; width: 160px; border: 3px solid; color: inherit; line-height: 34px; }
+.slide{ display: none;}
+.slide.active{ display: block;}
+.pager{ margin-top: 157px; text-align: left;}
+.pager .flex{ column-gap: 30px;}
+.pager .flex li{ flex: 1 1 25%; max-width: 25%; }
+.pager ol{ list-style: none; padding: 0;}
+.pager li .line{ height: 3px; background: #ffffff80; margin-bottom: 25px; position: relative;}
+.pager li.active .line::before{ content: ''; position: absolute; left: 0; top: 0; bottom: 0; background: var(--red); animation: fillbg 4s linear;}
+
+@keyframes fillbg{
+    0%{ width: 0;}
+    100%{ width: 100%;}
+}
+
+.pager p{ font-size: 18px; }
+.pager p b{ font-size: 24px; }
+
+/* responsive */
+@media screen and (max-width:1220px){
+    html{ font-size: 14px;}
+}
+@media screen and (max-width:980px){
+    .col-t-3{ flex-basis: 25%; max-width: 25%;}
+    .col-t-4{ flex-basis: 33.33%; max-width: 33.33%;}
+    .col-t-6{ flex-basis: 50%; max-width: 50%;}
+    .col-t-12{ flex-basis: 100%; max-width: 100%;}
+    .wrap-1 nav li{ margin: 0 20px;}
+    .banner p.lg{ font-size: 8rem;}
+    .banner{ padding: 100px 1rem;}
+}
+@media screen and (max-width:767px){
+    html{ font-size: 13px;}
+    .col-m-6{ flex-basis: 50%; max-width: 50%;}
+    .collapse{ display: none;}
+}
+@media screen and (max-width:460px){
+    .col-p-4{ flex-basis: 33.33%; max-width: 33.33%;}
+    .col-p-6{ flex-basis: 50%; max-width: 50%;}
+    .col-p-12{ flex-basis: 100%; max-width: 100%;}
+    .banner{ padding: 25px 1rem;}
+    .banner .kus{ font-size: 3rem;}
+    .banner p.lg{ font-size: 4rem;}
+    .pager{ margin-top: 70px;}
+}
